@@ -1,3 +1,22 @@
+
+ /**
+  * @swagger
+  * definitions:
+  *   Board:
+  *     tpye: "object"
+  *     properties:
+  *       id:
+  *         type: "integer"
+  *         format: "int64"
+  *       title:
+  *         type: "string"
+  *       author_name:
+  *         type: "string"
+  *       content:
+  *         type: "string"
+  *       createdAt:
+  *         type: "datetime"
+  */
 const Sequelize = require('sequelize');
 const sequelize = new Sequelize('board_db', 'root', 'root', {dialect: 'mysql'});
 
