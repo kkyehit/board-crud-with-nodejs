@@ -16,7 +16,21 @@
   *       createdAt:
   *         type: "datetime"
   */
- 
+
+ /**
+  * @swagger
+  * definitions:
+  *   addBoard:
+  *     tpye: "object"
+  *     properties:
+  *       title:
+  *         type: "string"
+  *       author_name:
+  *         type: "string"
+  *       content:
+  *         type: "string"
+  */
+
 const Sequelize = require('sequelize');
 const sequelize = new Sequelize('board_db', 'root', 'root', {dialect: 'mysql'});
 
