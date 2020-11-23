@@ -12,7 +12,7 @@ const swaggerDefinition = {
 
 const option = {
     swaggerDefinition,
-    apis: ['./controller/BoardController.js','./model/model.js']
+    apis: ['./controller/BoardController.js','./model/boardModel.js']
 };
 
 const swaggerSpec = swaggerJSDoc(option);
