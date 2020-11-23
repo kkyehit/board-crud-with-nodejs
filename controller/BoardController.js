@@ -75,6 +75,27 @@ router.get('/:id', boardService.getBoard);
 router.put('/:id', boardService.modifyBoard);
 
 // POST /
+/**
+ * @swagger
+ * /boards:
+ *   post:
+ *     summary: 게시글 추가
+ *     description: "게시글 추가"
+ *     operationId: "addBoard"
+ *     produces:
+ *       - "application/json"
+ *     tags: [boards]
+ *     parameters:
+ *       - in: "body"
+ *         name: "body"
+ *         description: 게시판 추가/수정 모델
+ *         required: true
+ *         schema:
+ *           &ref: "#/definitions/addBoard"
+ *     responses:
+ *       "204":
+ *          description: "successful operation"
+ */
 router.post('/', boardService.addBoard);
 
 // DELETE /:id
