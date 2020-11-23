@@ -5,6 +5,16 @@
  *   description: 게시판 CRUD
  */
  
+const express = require('express');
+const router = express.Router();
+const bodyParser = require('body-parser');
+
+router.use(bodyParser.json());
+router.use(bodyParser.urlencoded({extended: true}));
+
+const boardService = require("../service/BoardService");
+
+// GET / : board list
 /**
  * @swagger
  * /boards:
@@ -31,20 +41,35 @@
  *       "400":
  *          description: "Invaild"
  */
-
-const express = require('express');
-const router = express.Router();
-const bodyParser = require('body-parser');
-
-router.use(bodyParser.json());
-router.use(bodyParser.urlencoded({extended: true}));
-
-const boardService = require("../service/BoardService");
-
-// GET / : board list
 router.get('/', boardService.getBoardList);
 
 // GET /:id : board contents
+
+/**
+ * @swagger
+ * /boards/{id}:
+ *   get:
+ *     summary: 게시글의 세부 정보 가져오기
+ *     description: "게시글 세부 내용"
+ *     operationId: "getBoard"
+ *     produces:
+ *       - "application/json"
+ *     tags: [boards]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         type: integer
+ *         description: 게시판 id
+ *         required: true
+ *     responses:
+ *       "200":
+ *          description: "successful operation"
+ *          schema :
+ *            $ref: "#/definitions/Board"
+ *       "400":
+ *          description: "No Data"
+ */
+
 router.get('/:id', boardService.getBoard);
 
 // PUT /
