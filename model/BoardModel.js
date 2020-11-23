@@ -1,4 +1,3 @@
-
  /**
   * @swagger
   * definitions:
@@ -17,6 +16,7 @@
   *       createdAt:
   *         type: "datetime"
   */
+ 
 const Sequelize = require('sequelize');
 const sequelize = new Sequelize('board_db', 'root', 'root', {dialect: 'mysql'});
 
