@@ -72,6 +72,32 @@ router.get('/', boardService.getBoardList);
 router.get('/:id', boardService.getBoard);
 
 // PUT /
+/**
+ * @swagger
+ * /boards/{id}:
+ *   put:
+ *     summary: 게시글 수정
+ *     description: "게시글 수정"
+ *     operationId: "modifyBoard"
+ *     produces:
+ *       - "application/json"
+ *     tags: [boards]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         type: integer
+ *         description: 게시판 id
+ *         required: true
+ *       - in: "body"
+ *         name: "body"
+ *         description: 게시판 추가/수정 모델
+ *         required: true
+ *         schema:
+ *           &ref: "#/definitions/addBoard"
+ *     responses:
+ *       "204":
+ *          description: "successful operation"
+ */
 router.put('/:id', boardService.modifyBoard);
 
 // POST /
