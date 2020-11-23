@@ -69,7 +69,6 @@ router.get('/', boardService.getBoardList);
  *       "400":
  *          description: "No Data"
  */
-
 router.get('/:id', boardService.getBoard);
 
 // PUT /
@@ -79,6 +78,26 @@ router.put('/:id', boardService.modifyBoard);
 router.post('/', boardService.addBoard);
 
 // DELETE /:id
+/**
+ * @swagger
+ * /boards/{id}:
+ *   delete:
+ *     summary: 게시글 삭제
+ *     description: "게시글 삭제"
+ *     operationId: "deleteBoard"
+ *     produces:
+ *       - "application/json"
+ *     tags: [boards]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         type: integer
+ *         description: 게시판 id
+ *         required: true
+ *     responses:
+ *       "204":
+ *          description: "successful operation"
+ */
 router.delete('/:id', boardService.deleteBoard);
 
 
