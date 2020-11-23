@@ -32,24 +32,6 @@
  *          description: "Invaild"
  */
 
- /**
-  * @swagger
-  * definitions:
-  *   Board:
-  *     tpye: "object"
-  *     properties:
-  *       id:
-  *         type: "integer"
-  *         format: "int64"
-  *       title:
-  *         type: "string"
-  *       author_name:
-  *         type: "string"
-  *       content:
-  *         type: "string"
-  *       createdAt:
-  *         type: "datetime"
-  */
 const express = require('express');
 const router = express.Router();
 const bodyParser = require('body-parser');
