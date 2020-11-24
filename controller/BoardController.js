@@ -93,7 +93,7 @@ router.get('/:id', boardService.getBoard);
  *         description: 게시판 추가/수정 모델
  *         required: true
  *         schema:
- *           &ref: "#/definitions/addBoard"
+ *           $ref: "#/definitions/addBoard"
  *     responses:
  *       "204":
  *          description: "successful operation"
@@ -117,7 +117,7 @@ router.put('/:id', boardService.modifyBoard);
  *         description: 게시판 추가/수정 모델
  *         required: true
  *         schema:
- *           &ref: "#/definitions/addBoard"
+ *           $ref: "#/definitions/addBoard"
  *     responses:
  *       "204":
  *          description: "successful operation"
