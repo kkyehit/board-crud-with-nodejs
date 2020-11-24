@@ -8,6 +8,7 @@ router.use(bodyParser.urlencoded({extended: true}));
 const webService = require('../service/WebService')
 
 router.get("/", webService.index);
+router.get('/board', webService.inputBoard);
 
 
 
