@@ -22,3 +22,13 @@ exports.boardDo = (req, res) => {
     };
     boardRepository.createBoard(model).then(()=>{this.index(req, res);});
 }
+
+exports.boardList = (req, res) => { 
+    var boards = boardRepository.findBoardByPage(0)
+        .then((model) => {
+            res.render('boardListPage', {
+                MyData: 'test',
+                boards: model
+            });
+         });
+}
