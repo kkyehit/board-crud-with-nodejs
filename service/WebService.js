@@ -8,3 +8,10 @@ exports.index = (req, res) =>{
     res.writeHead(200);
     res.end(fs.readFileSync(__dirname + baseUrl + html));
 }
+
+exports.inputBoard = (req, res) => {
+    const html = 'inputBoardPage.html';
+    res.writeHead(200).end(fs.readFileSync(__dirname + baseUrl + html));
+}
+
+}
