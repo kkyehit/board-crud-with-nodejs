@@ -24,7 +24,8 @@ const boardService = require("../service/BoardService");
  *     operationId: "getBoardList"
  *     produces:
  *       - "application/json"
- *     tags: [boards]
+ *     tags: 
+ *       - "Board"
  *     parameters:
  *       - in: query
  *         name: pageNum
@@ -54,7 +55,8 @@ router.get('/', boardService.getBoardList);
  *     operationId: "getBoard"
  *     produces:
  *       - "application/json"
- *     tags: [boards]
+ *     tags: 
+ *       - "Board"
  *     parameters:
  *       - in: path
  *         name: id
@@ -81,7 +83,8 @@ router.get('/:id', boardService.getBoard);
  *     operationId: "modifyBoard"
  *     produces:
  *       - "application/json"
- *     tags: [boards]
+ *     tags: 
+ *       - "Board"
  *     parameters:
  *       - in: path
  *         name: id
@@ -110,7 +113,8 @@ router.put('/:id', boardService.modifyBoard);
  *     operationId: "addBoard"
  *     produces:
  *       - "application/json"
- *     tags: [boards]
+ *     tags: 
+ *       - "Board"
  *     parameters:
  *       - in: "body"
  *         name: "body"
@@ -134,7 +138,8 @@ router.post('/', boardService.addBoard);
  *     operationId: "deleteBoard"
  *     produces:
  *       - "application/json"
- *     tags: [boards]
+ *     tags: 
+ *       - "Board"
  *     parameters:
  *       - in: path
  *         name: id
