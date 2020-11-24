@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>게시글 목록 조회</title>
+</head>
+<body>
+    <center>
+        <table border="2">
+            <tr>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>작성일</th>
+            </tr>
+            <% for(idx in boards) { %>
+                <tr>
+                    <th><%=boards[idx]['title']%></th>
+                    <th><%=boards[idx]['author_name']%></th>
+                    <th><%=boards[idx]['createdAt']%></th>
+                </tr>
+            <% }; %>
+        </table>
+    </center>
+</body>
+</html>
