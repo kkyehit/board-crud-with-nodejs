@@ -12,4 +12,6 @@ router.get('/board', webService.inputBoard);
 
 router.post('/board.do', webService.boardDo);
 
+router.get('/boards', webService.boardList);
+
 module.exports = router;
