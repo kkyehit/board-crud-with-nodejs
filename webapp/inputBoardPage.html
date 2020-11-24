@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title th:text=#{title}></title>
+</head>
+<body>
+<center>
+    <form action="/web/board.do" method="post">
+        <table>
+            <tr>
+                <td> 제목 </td>
+                <td><input type="text" name="title"></td>
+            </tr>
+            <tr>
+                <td> 작성자 </td>
+                <td><input type="text" name="author_name"></td>
+            </tr>
+            <tr>
+                <td> 내용 </td>
+                <td><textarea name="content"></textarea> </td>
+            </tr>
+            <tr>
+                <td><input name="submit" type="submit" value="submit" /></td>
+            </tr>
+        </table>
+    </form>
+</center>
+</body>
+</html>
