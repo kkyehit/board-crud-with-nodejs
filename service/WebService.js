@@ -1,4 +1,5 @@
-var fs = require('fs');
+const fs = require('fs');
+const boardRepository = require('../repository/BoardRepository');
 
 const baseUrl = '\\..\\webapp\\';
 
